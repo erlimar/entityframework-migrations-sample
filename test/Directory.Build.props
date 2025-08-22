@@ -1,0 +1,14 @@
+<Project>
+    <PropertyGroup>
+        <Product>EntityFrameworkMigrations</Product>
+        <AnalysisLevel>8.0-recommended</AnalysisLevel>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+        <!-- Informe aqui todas as outras propriedades que queira
+             e sejam comuns a todos os componentes -->
+    </PropertyGroup>
+</Project>
+

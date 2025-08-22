@@ -1,0 +1,21 @@
+{
+    "name": "EntityFrameworkMigrations",
+    "service": "devenv",
+    "dockerComposeFile": "compose.yml",
+    "remoteUser": "devenv",
+    "workspaceFolder": "/EntityFrameworkMigrations",
+    "postStartCommand": ". .devcontainer/postStartCommand.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-dotnettools.csdevkit",
+                "ms-dotnettools.vscodeintellicode-csharp",
+                "EditorConfig.EditorConfig"
+            ]
+        }
+    }
+}

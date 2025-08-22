@@ -1,0 +1,9 @@
+services:
+  devenv:
+    build:
+      context: .
+      args:
+        - SDK_VERSION=8.0
+    volumes:
+      - ..:/EntityFrameworkMigrations
+    command: sleep infinity
