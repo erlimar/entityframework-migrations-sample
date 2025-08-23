@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 $rootPath = Split-Path -Parent $MyInvocation.MyCommand.Path | Join-Path -ChildPath ".."
 
 $srcPath = $rootPath | Join-Path -ChildPath "src" | Resolve-Path

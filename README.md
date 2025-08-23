@@ -22,7 +22,9 @@ executar a migração em uma implantação que usa _container_.
 - Criar imagem de migração
 - Executar migração em container via Docker Compose
 
-# Desenvolvendo
+# Contribuindo
+
+## Quando acabar de obter o código
 
 Inicialize as variáveis de ambiente local:
 ```powershell
@@ -48,4 +50,43 @@ dotnet restore
 Execute os testes unitários:
 ```sh
 dotnet test
+```
+
+Aplique as migrações no banco para a versão de desenvolvimento.
+
+> A versão em desenvolvimento sempre é a próxima (**Next**).
+```sh
+.\eng\ef-database-update.ps1 Next
+```
+
+## No dia a dia
+
+### Recrie sua migração de desenvolvimento
+
+Sempre que houver alguma mudança no modelo, ou quando você juntou
+seu código (_merge_) com outro, com ou sem conflito, você precisa
+atualizar a migração da versão em desenvolvimento, e sua base de
+dados local.
+
+> Lembrando que isso irá remover a última migração em
+> desenvolvimento que você já tem aplicada em sua base local.
+
+Então:
+```sh
+.\eng\migration-recreate-develop.ps1
+```
+
+### Libere uma nova versão da migração
+
+Sempre que o desenvolvimento atual estiver finalizado, e então você
+deseja liberar uma versão da sua aplicação, deve haver também uma
+nova versão das suas migrações.
+
+> Lembrando que isso irá remover a última migração em
+> desenvolvimento que você já tem aplicada em sua base local, e irá
+> recriá-la com o nome que você informar.
+
+Então:
+```sh
+.\eng\migration-release.ps1 {ReleaseName}
 ```

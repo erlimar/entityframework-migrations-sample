@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EntityFrameworkMigrations.EFCoreStorage.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250823140655_Next")]
-    partial class Next
+    [Migration("20250823145432_Develop")]
+    partial class Develop
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
