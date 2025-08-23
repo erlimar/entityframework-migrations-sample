@@ -14,7 +14,6 @@ executar a migração em uma implantação que usa _container_.
 
 # Planning
 
-- Criar script para inicializar ambiente de desenvolvimento (inclusive com dados secretos)
 - Criar Docker Compose exclusivo para execução da solução inteira
   - Aplicação
   - Migração
