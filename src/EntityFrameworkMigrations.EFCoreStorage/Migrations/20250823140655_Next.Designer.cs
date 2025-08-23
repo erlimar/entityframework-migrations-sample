@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EntityFrameworkMigrations.EFCoreStorage.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250823053139_Next")]
+    [Migration("20250823140655_Next")]
     partial class Next
     {
         /// <inheritdoc />
