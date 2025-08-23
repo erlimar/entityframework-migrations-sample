@@ -34,6 +34,16 @@ Inicialize as variáveis de ambiente local:
 .\setup.ps1
 ```
 
+Execute os pré-requisitos no Docker:
+```sh
+docker compose up -d
+```
+
+Quando os requisitos forem levantados, você terá:
+
+- Banco de dados Postgres em localhost:5432
+- Interface gerenciamento do banco: http://localhost:8080
+
 Restaure as ferramentas e dependências:
 ```sh
 dotnet tool restore
