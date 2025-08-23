@@ -54,9 +54,8 @@ dotnet test
 
 Aplique as migrações no banco para a versão de desenvolvimento.
 
-> A versão em desenvolvimento sempre é a próxima (**Next**).
 ```sh
-.\eng\ef-database-update.ps1 Next
+.\eng\ef-database-update.ps1 Develop
 ```
 
 ## No dia a dia
