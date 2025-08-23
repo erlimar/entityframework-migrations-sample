@@ -14,7 +14,6 @@ executar a migração em uma implantação que usa _container_.
 
 # Planning
 
-- Adicionar suporte a Docker Compose para banco Postgres
 - Criar script para inicializar ambiente de desenvolvimento (inclusive com dados secretos)
 - Criar Docker Compose exclusivo para execução da solução inteira
   - Aplicação
@@ -29,6 +28,11 @@ executar a migração em uma implantação que usa _container_.
 - Executar migração em container via Docker Compose
 
 # Desenvolvendo
+
+Inicialize as variáveis de ambiente local:
+```powershell
+.\setup.ps1
+```
 
 Restaure as ferramentas e dependências:
 ```sh
