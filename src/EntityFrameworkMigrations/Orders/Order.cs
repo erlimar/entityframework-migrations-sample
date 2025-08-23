@@ -1,8 +1,8 @@
 using System;
 
-namespace EntityFrameworkMigrations.Models;
+namespace EntityFrameworkMigrations.Orders;
 
-public class OrderModel
+public class Order
 {
     public int Id { get; set; }
     public required string FirstName { get; set; }
