@@ -19,9 +19,7 @@ executar a migração em uma implantação que usa _container_.
   - Migração
   - Aguardar dependências por health check
 - Criar API básica
-- Criar modelo de dados com migração
 - Executar migração no desenvolvimento por RunMigrations no Startup
-- Adicionar suporte a Swagger na API
 - Executar migração de Release localmente via bundle
 - Criar imagem de migração
 - Executar migração em container via Docker Compose
