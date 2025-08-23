@@ -31,7 +31,7 @@ executar a migração em uma implantação que usa _container_.
 
 Inicialize as variáveis de ambiente local:
 ```powershell
-.\setup.ps1
+.\eng\setup.ps1
 ```
 
 Execute os pré-requisitos no Docker:
