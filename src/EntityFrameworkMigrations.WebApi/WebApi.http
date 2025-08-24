@@ -1,0 +1,16 @@
+@WebApiAddress = http://localhost:5235
+
+POST {{WebApiAddress}}/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstName": "string",
+  "lastName": "string",
+  "totalCost": 0
+}
+
+###
+
+GET {{WebApiAddress}}/orders/{id}
+Accept: application/json
