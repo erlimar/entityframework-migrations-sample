@@ -7,8 +7,9 @@ executar a migração em uma implantação que usa _container_.
 
 **Requisitos:**
 
-- .NET SDK 8
-- Docker com Docker Compose
+- [.NET SDK 8](https://dotnet.microsoft.com/pt-br/download/dotnet/8.0)
+- [Docker com Docker Compose](https://docs.docker.com/compose/)
+- [PowerShell](https://github.com/PowerShell/PowerShell)
 
 > PS: Usamos [TheCleanArch](https://hibex-solutions.github.io/TheCleanArch/) também!
 
@@ -46,17 +47,6 @@ dotnet tool restore
 dotnet restore
 ```
 
-Execute os testes unitários:
-```sh
-dotnet test
-```
-
-Aplique as migrações no banco para a versão de desenvolvimento.
-
-```sh
-.\eng\ef-database-update.ps1 Develop
-```
-
 ## No dia a dia
 
 ### Recrie sua migração de desenvolvimento
@@ -66,7 +56,7 @@ seu código (_merge_) com outro, com ou sem conflito, você precisa
 atualizar a migração da versão em desenvolvimento, e sua base de
 dados local.
 
-> Lembrando que isso irá remover a última migração em
+> :warning: Lembrando que isso irá remover a última migração em
 > desenvolvimento que você já tem aplicada em sua base local.
 
 Então:
@@ -80,7 +70,7 @@ Sempre que o desenvolvimento atual estiver finalizado, e então você
 deseja liberar uma versão da sua aplicação, deve haver também uma
 nova versão das suas migrações.
 
-> Lembrando que isso irá remover a última migração em
+> :warning: Lembrando que isso irá remover a última migração em
 > desenvolvimento que você já tem aplicada em sua base local, e irá
 > recriá-la com o nome que você informar.
 
