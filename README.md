@@ -1,5 +1,5 @@
-EntityFramework Sample Migrations
-=================================
+Exemplo de uso de Migrações com EntityFramework
+===============================================
 
 Este é um exemplo de desenvolvimento .NET usando [EntityFrameworkCore](https://github.com/dotnet/efcore)
 com suporte a migrações. Também usamos [Docker](https://www.docker.com) e exemplificamos como podemos
