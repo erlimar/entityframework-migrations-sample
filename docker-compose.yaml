@@ -1,21 +1,7 @@
+include:
+  - docker-compose.db.yaml
+
 services:
-
-  database:
-    image: postgres:17-trixie
-    ports:
-      - 5432:5432
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    env_file: 
-      - .env
-    restart: always
-    healthcheck:
-      test: ["CMD", "pg_isready"]
-      interval: 30s
-      timeout: 60s
-      retries: 5
-      start_period: 80s
-
   database_manager:
     image: adminer
     restart: always
@@ -24,6 +10,3 @@ services:
     depends_on:
       database:
         condition: service_healthy
-
-volumes:
-  postgres_data: {}
