@@ -8,6 +8,8 @@ services:
       - 8080:80
     env_file: 
       - .env
+    environment:
+      - CONNECTIONSTRINGS__APPDBCONTEXT=Host=database;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD
     depends_on:
       database:
         condition: service_healthy

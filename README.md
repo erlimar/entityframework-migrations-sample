@@ -19,7 +19,6 @@ executar a migração em uma implantação que usa _container_.
   - Aplicação
   - Migração
   - Aguardar dependências por health check
-- Criar imagem de migração
 - Executar migração em container via Docker Compose
 
 # Contribuindo

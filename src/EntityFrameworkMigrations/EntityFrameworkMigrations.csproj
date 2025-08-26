@@ -8,8 +8,4 @@
     <PackageReference Include="TheCleanArch.Application" Version="0.1.0-rc0006" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\EntityFrameworkMigrations.Domain\EntityFrameworkMigrations.Domain.csproj" />
-  </ItemGroup>
-
 </Project>
