@@ -13,14 +13,6 @@ executar a migração em uma implantação que usa _container_.
 
 > PS: Usamos [TheCleanArch](https://hibex-solutions.github.io/TheCleanArch/) também!
 
-# Planning
-
-- Criar Docker Compose exclusivo para execução da solução inteira
-  - Aplicação
-  - Migração
-  - Aguardar dependências por health check
-- Executar migração em container via Docker Compose
-
 # Contribuindo
 
 ## Quando acabar de obter o código

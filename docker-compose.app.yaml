@@ -2,6 +2,12 @@ include:
   - docker-compose.db.yaml
 
 services:
+  migrations:
+    build:
+      context: .
+      dockerfile: Dockerfile.migrations
+    environment:
+      - CONNECTIONSTRINGS__APPDBCONTEXT=Host=database;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD
   app:
     build: .
     ports:
@@ -11,5 +17,7 @@ services:
     environment:
       - CONNECTIONSTRINGS__APPDBCONTEXT=Host=database;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD
     depends_on:
+      migrations:
+        condition: service_completed_successfully
       database:
         condition: service_healthy

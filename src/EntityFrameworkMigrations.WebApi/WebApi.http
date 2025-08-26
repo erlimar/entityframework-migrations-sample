@@ -1,4 +1,4 @@
-@WebApiAddress = http://localhost:5235
+@WebApiAddress = http://localhost:8080
 
 POST {{WebApiAddress}}/orders
 Accept: application/json
@@ -12,5 +12,5 @@ Content-Type: application/json
 
 ###
 
-GET {{WebApiAddress}}/orders/{id}
+GET {{WebApiAddress}}/orders/1 
 Accept: application/json
