@@ -1,3 +1,5 @@
+name: entityframework-migrations-sample-requirements
+
 include:
   - docker-compose.db.yaml
 

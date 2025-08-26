@@ -1,19 +1,21 @@
+name: entityframework-migrations-sample-app
+
 include:
   - docker-compose.db.yaml
 
 services:
   migrations:
     build:
-      context: .
-      dockerfile: Dockerfile.migrations
+      context: ../..
+      dockerfile: eng/docker/migrations.Dockerfile
     environment:
       - CONNECTIONSTRINGS__APPDBCONTEXT=Host=database;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD
   app:
-    build: .
+    build:
+      context: ../..
+      dockerfile: eng/docker/app.Dockerfile
     ports:
       - 8080:80
-    env_file: 
-      - .env
     environment:
       - CONNECTIONSTRINGS__APPDBCONTEXT=Host=database;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD
     depends_on:

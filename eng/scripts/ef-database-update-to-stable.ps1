@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$rootPath = Split-Path -Parent $MyInvocation.MyCommand.Path | Join-Path -ChildPath ".."
+$rootPath = Split-Path -Parent $MyInvocation.MyCommand.Path | Join-Path -ChildPath "..\.."
 $migrationStable = Get-Content -Path ($rootPath | Join-Path -ChildPath "migration-stable-version.txt" | Resolve-Path) -Raw
 
 $webApiPath = $rootPath | Join-Path -ChildPath "src\EntityFrameworkMigrations.WebApi" | Resolve-Path

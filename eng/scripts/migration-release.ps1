@@ -6,7 +6,7 @@ $ErrorActionPreference = "Stop"
 
 $rootPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-$migrationStableVersionFilePath = $rootPath | Join-Path -ChildPath "..\migration-stable-version.txt"
+$migrationStableVersionFilePath = $rootPath | Join-Path -ChildPath "..\..\migration-stable-version.txt"
 
 $efMigrationsRemoveScript = $rootPath | Join-Path -ChildPath "ef-migrations-remove.ps1" | Resolve-Path
 $efMigrationsAddScript = $rootPath | Join-Path -ChildPath "ef-migrations-add.ps1" | Resolve-Path

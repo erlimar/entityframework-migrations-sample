@@ -1,13 +1,13 @@
-$rootPath = Split-Path -Parent $MyInvocation.MyCommand.Path | Join-Path -ChildPath ".."
+$rootPath = Split-Path -Parent $MyInvocation.MyCommand.Path | Join-Path -ChildPath "..\.."
 
 $postgresPassword = -join ((48..57+64..90+95+97..122) | Get-Random -Count 20 | ForEach-Object {[char]$_})
 
-$envFilePath = $rootPath | Join-Path -ChildPath ".env" 
+$envFilePath = $rootPath | Join-Path -ChildPath "db.env" 
 
 if (Test-Path $envFilePath) {
-    "File .env already exists." | Write-Host
+    "File db.env already exists." | Write-Host
 } else {
-    "Generating file .env" | Write-Host
+    "Generating file db.env" | Write-Host
     $envLocalContent = @"
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=${postgresPassword}
