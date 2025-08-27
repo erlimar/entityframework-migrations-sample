@@ -12,3 +12,6 @@ executar a migração em uma implantação que usa _container_.
 - [PowerShell](https://github.com/PowerShell/PowerShell)
 
 > PS: Usamos [TheCleanArch](https://hibex-solutions.github.io/TheCleanArch/) também!
+
+Saiba como contribuir em [CONTRIBUTTING.md](CONTRIBUTTING.md).
+
