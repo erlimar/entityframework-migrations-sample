@@ -13,5 +13,5 @@ executar a migração em uma implantação que usa _container_.
 
 > PS: Usamos [TheCleanArch](https://hibex-solutions.github.io/TheCleanArch/) também!
 
-Saiba como contribuir em [CONTRIBUTTING.md](CONTRIBUTTING.md).
+Saiba como contribuir em [CONTRIBUTING.md](CONTRIBUTING.md).
 
